@@ -1,0 +1,6 @@
+name: EcseSit
+main: kr.ecse.sit.EcseSit
+version: 1.0
+api-version: 1.18
+commands:
+  앉기:

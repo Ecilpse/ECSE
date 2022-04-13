@@ -1,0 +1,6 @@
+name: EcseCook
+main: kr.ecse.cook.EcseCook
+version: 1.0
+api-version: 1.18
+commands:
+  요리:

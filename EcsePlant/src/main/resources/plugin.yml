@@ -1,0 +1,6 @@
+name: EcsePlant
+main: kr.ecse.plant.EcsePlant
+version: 1.0
+api-version: 1.18
+commands:
+  자동심기:

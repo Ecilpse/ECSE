@@ -1,0 +1,10 @@
+name: EcseExplore
+main: kr.ecse.explore.EcseExplore
+version: 1.0
+api-version: 1.18
+commands:
+  ecsevote:
+softdepend:
+  - PlaceholderAPI
+  - Votifier
+  - EcseLibrary

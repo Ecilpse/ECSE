@@ -1,0 +1,6 @@
+name: EcseJump
+main: kr.ecse.jump.EcseJump
+version: 1.0
+api-version: 1.18
+commands:
+  더블점프:

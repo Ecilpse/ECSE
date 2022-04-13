@@ -1,0 +1,6 @@
+name: EcseHat
+main: kr.ecse.hat.EcseHat
+version: 1.0
+api-version: 1.18
+commands:
+  모자:

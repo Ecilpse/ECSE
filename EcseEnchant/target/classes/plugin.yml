@@ -1,0 +1,6 @@
+name: EcseEnchant
+main: kr.ecse.enchant.EcseEnchant
+version: 1.0
+api-version: 1.18
+commands:
+  강화:
