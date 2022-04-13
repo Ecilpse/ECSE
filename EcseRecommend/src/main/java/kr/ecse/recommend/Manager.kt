@@ -55,7 +55,7 @@ object Manager {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ge execute all cmi broadcast &f :mc_nether_star: &b$name&f님이 서버에 지인을 초대하여 &e20 &d크레딧&f을 받았습니다. &7(&e${player.name}&f님&7)".color())
         })
     }
-    fun failedMessage(player: Player, boolean: Boolean) {
+    fun failedMessage(player: Player, boolean: Boolean) { //t6
         val message = if(boolean) { //불린이 참일때 메세지라는 변수를 중괄호 안 내용으로 저장
             Component.text("&f \uE5D0 &f자신을 추천인으로 지명할 수 없습니다.\n&7    다시 시도하려면 채팅창을 열어 메세지를 클릭해주세요.".color())
                     .hoverEvent(HoverEvent.showText(Component.text("&b클릭하시면, 다시 입력하실 수 있습니다.".color())))

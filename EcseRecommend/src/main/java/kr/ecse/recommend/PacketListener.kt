@@ -20,7 +20,7 @@ object PacketListener: PacketAdapter(main, PacketType.Play.Client.UPDATE_SIGN) {
                 val offlinePlayer = it
                 if(it == player) Manager.failedMessage(player, true)
                 else Manager.reward(player, offlinePlayer.name)
-            } ?: run {
+            } ?: run { //테스트5
                 main.server.scheduler.runTaskAsynchronously(main, Runnable { //Asynchronously 임의로 비동기. 떼면 임의로 동기
                     player.sendMessage("&f  &f플레이어 조회중입니다. 잠시만 기다려주세요..".color())
                     val offlinePlayer = Bukkit.getOfflinePlayers().firstOrNull { it.name == line1 }
