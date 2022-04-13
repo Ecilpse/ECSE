@@ -17,6 +17,6 @@ class Command: CommandExecutor {
                 if(args[0] == sender.name) Bukkit.getPlayer(args[0])?.let { Manager.openSign(it) } //args 0 이 첫번쨰 args
             }
         }
-        return true //테스트2
+        return true //테스트3
     }
 }
