@@ -65,14 +65,17 @@ class Command: CommandExecutor {
                         }
                     }
                     "설정" -> {
-                        if (args.size == 2) {
-                            Bukkit.getPlayerUniqueId(args[1])?.let { Manager.addVote(it) } ?: sender.sendMessage("&f :notify: &e${args[1]}&f님이 UUID가 조회되지 않습니다.".color())
-                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ge execute all ecsevote 설정 ${args[1]}")
-                            sender.sendMessage("&e${args[1]}&f님의 추천변수가 설정되었습니다.".color())
+                        main.server.scheduler.schedule(main, SynchronizationContext.ASYNC) {
+                            if (args.size == 2) {
+                                Bukkit.getPlayerUniqueId(args[1])?.let { Manager.addVote(it) }
+                                        ?: sender.sendMessage("&f :notify: &e${args[1]}&f님이 UUID가 조회되지 않습니다.".color())
+                                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ge execute all ecsevote 설정 ${args[1]}")
+                                sender.sendMessage("&e${args[1]}&f님의 추천변수가 설정되었습니다.".color())
+                            }
+                            Manager.addVote(sender.uniqueId)
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ge execute all ecsevote 설정 ${sender.name}")
+                            sender.sendMessage("&f :notify: 당신의 추천변수가 설정되었습니다.".color())
                         }
-                        Manager.addVote(sender.uniqueId)
-                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ge execute all ecsevote 설정 ${sender.name}")
-                        sender.sendMessage("&f :notify: 당신의 추천변수가 설정되었습니다.".color())
                     }
                     "목록" -> {
                         if (args.size == 2) {
