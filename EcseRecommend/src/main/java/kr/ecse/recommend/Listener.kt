@@ -29,6 +29,10 @@ object Listener: Listener {
         Manager.removeRetry(event.player.uniqueId)
     }
 
+    @EventHandler
+    fun onQuit2(event: Remove) {
+        Manager.removeRetry(event.player.uniqueId)
+    }
     @EventHandler //테스트5
     fun onDowloaded(event: PlayerResourcePackStatusEvent) {
         if (event.player.hasPlayedBefore()) {

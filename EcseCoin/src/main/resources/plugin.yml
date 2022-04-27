@@ -1,0 +1,9 @@
+name: EcseExplore
+main: kr.ecse.EcseCoin
+version: 1.0
+api-version: 1.18
+commands:
+  ecoin:
+softdepend:
+  - PlaceholderAPI
+  - EcseLibrary
